@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Sriram Anumandla - Software Development Engineer & AI Engineer">
+    <title>Sriram Anumandla | SDE & AI Engineer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+    <canvas id="bg-canvas"></canvas>
+    <div id="cursor" class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar hidden-onload">
+        <a href="#home" class="logo">SA.</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+        </div>
+        <button class="mobile-menu-btn">
+            <svg viewBox="0 0 24 24" fill="none" class="menu-icon">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content hidden-onload">
+                <div class="hero-badge">Available for opportunities</div>
+                <h1 class="hero-title">
+                    Hi, I'm Sriram.<br>
+                    <span class="typewriter-text gradient-text"></span><span class="cursor-blink">|</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Building scalable distributed systems and intelligent AI solutions.
+                    Actively transforming ideas into robust, high-performance architecture.
+                </p>
+                <div class="hero-actions">
+                    <a href="#experience" class="btn btn-primary">View Experience</a>
+                    <a href="#projects" class="btn btn-secondary">See Projects</a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+                <div class="grid-overlay"></div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title reveal"><span>01.</span> Experience</h2>
+                <div class="timeline">
+                    <!-- Amazon -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Software Development Engineer</h3>
+                                <span class="timeline-date">Sep 2025 – Present</span>
+                            </div>
+                            <h4 class="company-name">Amazon <span>• Sunnyvale, CA</span></h4>
+                            <ul class="experience-list">
+                                <li>Built COTA (Code-Optimized Test Analyzer) leveraging LLMs, Decision Trees, AWS SQS
+                                    and RAG on Kendra to analyze code diffs and predict relevant test suites via call
+                                    graph analysis; adopted by 400+ engineers, saving 2+ engineering days per release.
+                                </li>
+                                <li>Developing a distributed multi-agent ML infrastructure on PyTorch, AWS SageMaker,
+                                    DynamoDB, and AWS Bedrock, to host specialized AI agents (CTS validation and Code
+                                    Upleveling) for FireOS ecosystem with per-service auto-scaling.</li>
+                                <li>Optimized FireOS stability by diagnosing high-concurrency race conditions and IPC
+                                    bottlenecks using low-level debugging tools, reducing system-level ANRs and crashes
+                                    across the FireTV device fleet by 15%.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- HireBest -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>AI Engineer Intern</h3>
+                                <span class="timeline-date">Jun 2024 – Aug 2024</span>
+                            </div>
+                            <h4 class="company-name">HireBest (AiAssitant.co) <span>• San Jose, CA</span></h4>
+                            <ul class="experience-list">
+                                <li>Built distributed Voice AI interview platform with LLM-driven agents using Python,
+                                    PyTorch, LangGraph, VectorDB deployed on AWS ECS, handling 200+ concurrent sessions
+                                    reducing recruiter screening time from 30 minutes to under 90 seconds.</li>
+                                <li>Replaced HTTP polling with WebSocket architecture (Socket.io), cutting end-to-end
+                                    voice latency by 40% and enabling real-time bidirectional communication for
+                                    human-like conversational pacing with sub-250ms response times.</li>
+                                <li>Developed recruiter platform with React frontend, REST APIs, Docker and PostgreSQL
+                                    backend for candidate management, interview scheduling, and storing transcripts,
+                                    audio metadata, and AI-generated evaluations on AWS S3.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ServiceNow -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Associate Software Development Engineer</h3>
+                                <span class="timeline-date">Sep 2022 – Aug 2023</span>
+                            </div>
+                            <h4 class="company-name">ServiceNow <span>• Hyderabad, TS</span></h4>
+                            <ul class="experience-list">
+                                <li>Engineered scalable ServiceNow Microsoft 365 integration with OAuth 2.0 and
+                                    bidirectional user data sync, connecting instances across multiple Microsoft tenants
+                                    using JavaScript, REST APIs, SQL and Proxy servers.</li>
+                                <li>Developed a high-throughput batch synchronization pipeline to import Microsoft Teams
+                                    conversations into associated ServiceNow tickets handling 500+ concurrent sync jobs
+                                    across 300+ enterprise deployments.</li>
+                                <li>Built VA Push Notifications delivering real-time ServiceNow approval requests on
+                                    event-driven microservices architecture with API pagination and wrote comprehensive
+                                    end-to-end test suites ensuring reliable enterprise deployments.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title reveal"><span>02.</span> Featured Projects</h2>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal">
+                        <div class="project-content">
+                            <div class="project-overline">AI & Machine Learning</div>
+                            <h3 class="project-title">Mixture-of-Experts QA System</h3>
+                            <div class="project-description">
+                                <ul class="experience-list project-list">
+                                    <li>Trained 6 Small Language Models using PyTorch and Hugging Face Transformers on
+                                        distinct domains and built a gating network to dynamically route queries to
+                                        experts, achieving 90%+ accuracy tests.</li>
+                                    <li>Engineered a fast model serving pipeline via FastAPI, Docker, and Nginx
+                                        containerizing SLMs and built a low-latency inference layer with async request
+                                        handling deployed on AWS EC2.</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech">
+                                <li>PyTorch</li>
+                                <li>FastAPI</li>
+                                <li>Docker</li>
+                                <li>AWS EC2</li>
+                                <li>Hugging Face</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal">
+                        <div class="project-content">
+                            <div class="project-overline">Full-Stack & Cloud</div>
+                            <h3 class="project-title">Real Estate Enquiry Platform</h3>
+                            <div class="project-description">
+                                <ul class="experience-list project-list">
+                                    <li>Built a full-stack real estate platform for property search based on user
+                                        location and geo-spatial distance using React, Node.js, Express.</li>
+                                    <li>Integrated an LLM-powered natural language query interface translating
+                                        conversational queries into structured Elasticsearch filters. Deployed on AWS
+                                        EC2 with S3 for property image storage.</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech">
+                                <li>React</li>
+                                <li>Node.js</li>
+                                <li>Express</li>
+                                <li>Elasticsearch</li>
+                                <li>AWS S3</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card reveal">
+                        <div class="project-content">
+                            <div class="project-overline">DevOps & Infrastructure</div>
+                            <h3 class="project-title">Self-Hosted Cloud Infrastructure</h3>
+                            <div class="project-description">
+                                <ul class="experience-list project-list">
+                                    <li>Repurposed a physical machine as a self-hosted cloud server running Linux,
+                                        configured with Docker containerization, Nginx reverse proxy, and SSH tunneling
+                                        for secure remote access.</li>
+                                    <li>Implemented CI/CD pipelines for automatic deployment, service orchestration with
+                                        Docker Compose, and network configuration including port forwarding and dynamic
+                                        DNS.</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech">
+                                <li>Linux</li>
+                                <li>Docker Compose</li>
+                                <li>Nginx</li>
+                                <li>CI/CD</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title reveal"><span>03.</span> Technical Arsenal</h2>
+                <div class="skills-container reveal">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span>C++</span><span>Java
+                                8</span><span>Python</span><span>Go</span><span>TypeScript</span><span>JavaScript</span><span>HTML/CSS</span><span>SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skill-tags">
+                            <span>React</span><span>Node.js</span><span>Express.js</span><span>FastAPI</span><span>Flask</span><span>PyTorch</span><span>TensorFlow</span><span>LangGraph</span><span>Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases & Cloud</h3>
+                        <div class="skill-tags">
+                            <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>PineCone</span><span>VectorDB</span><span>AWS
+                                (EC2, RDS, SageMaker, Bedrock)</span><span>Gemini Vertex</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Concepts</h3>
+                        <div class="skill-tags">
+                            <span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>Kafka</span><span>Distributed
+                                Systems</span><span>Microservices</span><span>Agent
+                                Orchestration</span><span>GenAI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title reveal"><span>04.</span> Education</h2>
+                <div class="education-card reveal">
+                    <div class="edu-header">
+                        <div class="edu-title">
+                            <h3>Master of Science in Computer Science</h3>
+                            <h4 class="university">Florida State University</h4>
+                        </div>
+                        <div class="edu-meta">
+                            <span class="edu-date">Sep 2023 – May 2025</span>
+                            <span class="edu-gpa">GPA: 3.8/4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Sriram Anumandla. Designed and built with cutting-edge web technologies.</p>
+                <div class="social-links">
+                    <a href="https://github.com/asriram07" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sriram-anumandla/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
