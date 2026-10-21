@@ -9,10 +9,10 @@
     --surface: #111111;
     --surface-border: #222222;
     --surface-border-hover: #333333;
-    
+
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-head: 'Outfit', var(--font-sans);
-    
+
     --section-spacing: 120px;
     --container-width: 1100px;
     --transition: all 0.3sease-in-out;
@@ -44,7 +44,8 @@ body {
     font-family: var(--font-sans);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none; /* Custom cursor */
+    cursor: none;
+    /* Custom cursor */
 }
 
 ::selection {
@@ -96,7 +97,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-head);
     line-height: 1.2;
 }
@@ -208,7 +214,7 @@ a:hover {
     z-index: 100;
     background: rgba(5, 5, 5, 0.7);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease;
 }
 
@@ -313,7 +319,7 @@ a:hover {
 
 .outline-text {
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255,255,255,0.4);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
     display: inline-block;
     transition: -webkit-text-stroke 0.3s ease;
 }
@@ -329,8 +335,13 @@ a:hover {
 }
 
 @keyframes blink {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .hero-subtitle {
@@ -382,16 +393,21 @@ a:hover {
 }
 
 @keyframes drift {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
 }
 
 .grid-overlay {
     position: absolute;
     inset: 0;
-    background-image: 
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     mask-image: linear-gradient(to bottom, white, transparent);
     -webkit-mask-image: linear-gradient(to bottom, white, transparent);
@@ -446,7 +462,7 @@ a:hover {
 .timeline-content:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .timeline-header {
@@ -508,7 +524,8 @@ a:hover {
 }
 
 .project-card {
-    background: rgba(17, 17, 17, 0.4); /* slight glass effect */
+    background: rgba(17, 17, 17, 0.4);
+    /* slight glass effect */
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
@@ -527,7 +544,10 @@ a:hover {
 .project-card::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-radius: inherit;
     background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(56, 189, 248, 0.08), transparent 40%);
     opacity: 0;
@@ -542,7 +562,7 @@ a:hover {
 
 .project-card:hover {
     border-color: var(--secondary);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .project-content {
@@ -583,7 +603,7 @@ a:hover {
 }
 
 .project-tech li {
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     border: 1px solid var(--surface-border);
@@ -631,8 +651,15 @@ a:hover {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 .skill-tags span:hover {
@@ -704,7 +731,7 @@ a:hover {
     color: #fff;
     font-weight: 600;
     margin-top: 0.3rem;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
     font-size: 0.9rem;
@@ -751,50 +778,52 @@ a:hover {
     .container {
         padding: 0 1.5rem;
     }
-    
+
     .hero {
         padding: 0 2rem;
     }
-    
+
     .hero-title {
         font-size: 3rem;
     }
-    
+
     .timeline::before {
         left: 0;
     }
-    
+
     .timeline-item {
         padding-left: 30px;
     }
-    
+
     .timeline-dot {
         left: -4px;
     }
-    
+
     .timeline-header {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .nav-links {
-        display: none; /* simple mobile hide for now, could add hamburger */
+        display: none;
+        /* simple mobile hide for now, could add hamburger */
     }
-    
+
     .mobile-menu-btn {
         display: block;
     }
-    
+
     .edu-header {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .edu-meta {
         align-items: flex-start;
     }
-    
-    .cursor, .cursor-follower {
+
+    .cursor,
+    .cursor-follower {
         display: none;
     }
 }
